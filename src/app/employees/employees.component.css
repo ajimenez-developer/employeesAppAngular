@@ -1,9 +1,11 @@
 .header {
-  font-weight: bold;
   padding: 3rem 0;
-  background: rgb(166,18,13);
-  background: linear-gradient(180deg, rgba(166,18,13,1) 0%, rgba(221,27,22,1) 69%, rgba(179,179,179,1) 100%);
-  color: white;
+  color: #a6130d;
+}
+
+.header h1 {
+  font-family: 'Montserrat-Bold';
+  font-size: 4rem;
 }
 
 .footer {
@@ -14,3 +16,4 @@
 .footer span {
   font-weight: bold;
 }
+

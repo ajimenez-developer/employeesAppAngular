@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import { Employee } from '../interfaces/employee.interface';
-import { Position } from '../interfaces/position.interface';
+import { Employee } from '../models/employee.interface';
+import { Position } from '../models/position.interface';
 
 @Component({
   selector: 'custom-form',

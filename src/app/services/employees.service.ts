@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Positions } from '../interfaces/positions.interface';
+import { Positions } from '../models/positions.interface';
 
 @Injectable()
 

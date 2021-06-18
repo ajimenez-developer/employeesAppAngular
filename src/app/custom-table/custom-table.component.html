@@ -30,7 +30,7 @@
       </thead>
       <tbody *ngIf="employees.length > 0">
         <!-- <tr *ngFor="let employee of employees | filter: filterpost; let i = index"> -->
-        <tr *ngFor="let employee of employees; let i = index">
+        <tr *ngFor="let employee of employees | filter:filterValue; let i = index">
           <td>{{employee.name | titlecase}}</td>
           <td>{{employee.surname | titlecase}}</td>
           <td>{{employee.position}}</td>

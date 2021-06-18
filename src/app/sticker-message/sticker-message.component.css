@@ -1,0 +1,10 @@
+.sticker {
+  font-family: 'Montserrat-Bold';
+  font-size: 1.25rem;
+}
+
+.sticker .alert.alert-success {
+  background-color: rgb(76, 145, 65, .5);
+  border: 3px solid #333;
+  padding: 0.5rem 1rem;
+}

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -11,6 +11,7 @@ import { CustomFormComponent } from './custom-form/custom-form.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeesService } from './services/employees.service';
 import { FilterPipe } from './pipes/filter.pipe';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,14 @@ import { FilterPipe } from './pipes/filter.pipe';
     CustomTableComponent,
     CustomFormComponent,
     EmployeesComponent,
-    FilterPipe
+    FilterPipe,
+    SearchComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [EmployeesService],
   bootstrap: [AppComponent]

@@ -1,0 +1,16 @@
+<section class="row">
+  <div class="col-12 d-flex justify-content-end mt-3">
+    <div class="col-12 col-sm-8 col-md-6 col-xl-3">
+    <form class="search-container">
+      <div class="inner-form">
+      <div class="input-field">
+      <button class="btn-search" type="button">
+      <img src="/assets/img/search.svg" alt="Bootstrap" width="30" height="20">
+      </button>
+      <input [readonly]="employees.length === 0" id="search" type="text" spellcheck="false" autocomplete="off" [formControl]="searchEmployee" placeholder="Type a name...">
+      </div>
+      </div>
+      </form>
+    </div>
+  </div>
+</section>

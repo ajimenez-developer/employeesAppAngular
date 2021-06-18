@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Positions } from '../interfaces/positions.interface';
-import { Position } from '../interfaces/position.interface';
+import { Positions } from '../models/positions.interface';
+import { Position } from '../models/position.interface';
 import { EmployeesService } from '../services/employees.service';
-import { Employee } from '../interfaces/employee.interface';
+import { Employee } from '../models/employee.interface';
 
 @Component({
   selector: 'employees',
@@ -38,7 +38,7 @@ export class EmployeesComponent implements OnInit {
     birthday: '',
     position: ''
   }
-  
+  filterValue: string = '';
   employees: Employee[] = [];
 
   listPositions: Positions = {
@@ -86,6 +86,10 @@ export class EmployeesComponent implements OnInit {
     this.editForm = false;
     this.msg = this.employees[indexEmployee].name+ ` we have updated your data!`;
     
+  }
+
+  handleSearch = (value: string) => {
+    this.filterValue = value
   }
 
   closeUpdateForm = (show: boolean): void => {

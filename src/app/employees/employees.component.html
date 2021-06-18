@@ -1,10 +1,14 @@
 <div class="container col-12">
   <div class="header row">
     <div class="col-sm-12 d-flex justify-content-center">
-      <h1>{{title | uppercase}}</h1>
+      <h1>{{title}}</h1>
     </div>
   </div>
-
+  
+  <sticker-message 
+    [msg]='msg' 
+    (closeAlert)="closeAlert($event)">
+  </sticker-message>
   <custom-form 
     [employee]="employee" 
     [optionsPosition]="options"               
@@ -13,9 +17,16 @@
     (editEmployee)="updateEmployee($event)" 
     (closeUpdateForm)="closeUpdateForm($event)">
   </custom-form>
-
-  <custom-table [employees]="employees" (editEmployee)="editEmployee($event)" (deleteEmployee)="deleteEmployee($event)"></custom-table>
-  <sticker-message [msg]='msg' (closeAlert)="closeAlert($event) "></sticker-message>
+  <search
+    [employees]="employees" 
+    (search)="handleSearch($event)">
+  </search>
+  <custom-table 
+    [employees]="employees"
+    [filterValue]="filterValue"
+    (editEmployee)="editEmployee($event)" 
+    (deleteEmployee)="deleteEmployee($event)">
+  </custom-table>
   <footer class="footer row">
     <div class="col-12 d-flex justify-content-end pt-3 pb-3">
       <span>App developed by ajimenez.developer@gmail.com</span>
