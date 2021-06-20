@@ -15,7 +15,7 @@
             name="name" [(ngModel)]="employee.name"
             placeholder="Name..."
             autocomplete="off" 
-            required
+            (input)="validatorOnlyText($event)"
           >
         </div>
       </div>
@@ -32,7 +32,7 @@
             [(ngModel)]="employee.surname"
             placeholder="Surname..."
             autocomplete="off" 
-            required
+            (input)="validatorOnlyText($event)"
           >
         </div>
       </div>
@@ -42,7 +42,7 @@
         </label>
 
         <div class="col-sm-12 form-control ">
-          <select type="select" name="position" class="selectpicker selectPosition" [(ngModel)]="employee.position" required>
+          <select type="select" name="position" class="selectpicker selectPosition" [(ngModel)]="employee.position">
             <option value="" disabled selected>Select a position...</option>
             <option *ngFor="let option of optionsPosition" [value]="option.label">
               {{ option.label }}
@@ -62,7 +62,6 @@
             id="birthday"
             name="birthday" [(ngModel)]="employee.birthday"
             placeholder="dd/mm/yyyy"
-            required
           >
         </div>
       </div>
@@ -91,6 +90,7 @@
               name="name" [(ngModel)]="employeeEdited.name"
               placeholder="Name..."
               autocomplete="off" 
+              (input)="validatorOnlyText($event)"
             >
           </div>
           <div class="form-group">

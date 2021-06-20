@@ -75,4 +75,11 @@ export class CustomFormComponent implements OnInit {
   closeForm() {
     this.closeUpdateForm.emit(true)
   }
+
+  public validatorOnlyText(event: any) {
+    const pattern = /^[a-zA-Z ]*$/;   
+    if (!pattern.test(event.target.value)) {
+      event.target.value = event.target.value.replace(/[^a-zA-Z ]/g, "");
+    }
+  }
 }
