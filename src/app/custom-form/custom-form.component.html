@@ -41,8 +41,8 @@
           <h5 class="card-title">Position</h5>
         </label>
 
-        <div class="col-sm-12">
-          <select name="position" class="form-control selectpicker" [(ngModel)]="employee.position" required>
+        <div class="col-sm-12 form-control ">
+          <select type="select" name="position" class="selectpicker selectPosition" [(ngModel)]="employee.position" required>
             <option value="" disabled selected>Select a position...</option>
             <option *ngFor="let option of optionsPosition" [value]="option.label">
               {{ option.label }}
@@ -118,4 +118,5 @@
     </div>
   </div>
 </div>
+
 </div>

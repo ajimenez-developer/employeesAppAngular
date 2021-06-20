@@ -2,3 +2,14 @@
   background-color: #a6130d;
   color: #f3f3f3;
 }
+
+.selectPosition {
+  padding: 0;
+  border: 0;
+  width: 100%;
+  color: #212529;
+}
+
+.selectPosition:focus-visible {
+  outline-width: 0;
+}
